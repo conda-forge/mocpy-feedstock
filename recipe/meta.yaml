@@ -1,5 +1,5 @@
 {% set name = "MOCPy" %}
-{% set version = "0.8.5" %}
+{% set version = "0.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/MOCPy-{{ version }}.tar.gz
-  sha256: 578c05c7f09017061a03a55dd9ca54353ea5c4de89bd16b1458b39b9ce22eeba
+  sha256: 2b60e5c2750dc19fac904142f543d42c6641b12e9f7576995bb3702ddf1b252a
 
 build:
   number: 0
@@ -57,8 +57,8 @@ about:
   license_file:
     - LICENSE
     - library_licenses/MOCPy-LICENSE-BSD
-    - library_licenses/autocfg-LICENSE-APACHE
-    - library_licenses/autocfg-LICENSE-MIT
+    - library_licenses/arrayvec-LICENSE-APACHE
+    - library_licenses/arrayvec-LICENSE-MIT
     - library_licenses/autocfg-LICENSE-APACHE
     - library_licenses/autocfg-LICENSE-MIT
     - library_licenses/base-x-LICENSE-MIT
@@ -66,15 +66,16 @@ about:
     - library_licenses/base64-LICENSE-MIT
     - library_licenses/bitflags-LICENSE-APACHE
     - library_licenses/bitflags-LICENSE-MIT
+    - library_licenses/bitvec-LICENSE-MIT
     - library_licenses/bumpalo-LICENSE-APACHE
     - library_licenses/bumpalo-LICENSE-MIT
+    - library_licenses/byteorder-LICENSE-MIT
     - library_licenses/cdshealpix-LICENSE-APACHE
     - library_licenses/cdshealpix-LICENSE-MIT
     - library_licenses/cfg-if-LICENSE-APACHE
     - library_licenses/cfg-if-LICENSE-MIT
     - library_licenses/cfg-if-LICENSE-APACHE
     - library_licenses/cfg-if-LICENSE-MIT
-    - library_licenses/cloudabi-LICENSE-BSD
     - library_licenses/const_fn-LICENSE-APACHE
     - library_licenses/const_fn-LICENSE-MIT
     - library_licenses/crossbeam-channel-LICENSE-APACHE
@@ -90,7 +91,7 @@ about:
     - library_licenses/discard-LICENSE-MIT
     - library_licenses/either-LICENSE-APACHE
     - library_licenses/either-LICENSE-MIT
-    - library_licenses/fuchsia-cprng-LICENSE
+    - library_licenses/funty-LICENSE-MIT
     - library_licenses/getrandom-LICENSE-APACHE
     - library_licenses/getrandom-LICENSE-MIT
     - library_licenses/ghost-LICENSE-APACHE
@@ -110,6 +111,8 @@ about:
     - library_licenses/itoa-LICENSE-MIT
     - library_licenses/lazy_static-LICENSE-APACHE
     - library_licenses/lazy_static-LICENSE-MIT
+    - library_licenses/lexical-core-LICENSE-APACHE
+    - library_licenses/lexical-core-LICENSE-MIT
     - library_licenses/libc-LICENSE-APACHE
     - library_licenses/libc-LICENSE-MIT
     - library_licenses/lock_api-LICENSE-APACHE
@@ -118,11 +121,19 @@ about:
     - library_licenses/log-LICENSE-MIT
     - library_licenses/matrixmultiply-LICENSE-APACHE
     - library_licenses/matrixmultiply-LICENSE-MIT
+    - library_licenses/memchr-LICENSE-MIT
     - library_licenses/memoffset-LICENSE-MIT
+    - library_licenses/moc-LICENSE-APACHE
+    - library_licenses/moc-LICENSE-MIT
     - library_licenses/ndarray-LICENSE-APACHE
     - library_licenses/ndarray-LICENSE-MIT
+    - library_licenses/nom-LICENSE-MIT
     - library_licenses/num-LICENSE-APACHE
     - library_licenses/num-LICENSE-MIT
+    - library_licenses/num-LICENSE-APACHE
+    - library_licenses/num-LICENSE-MIT
+    - library_licenses/num-bigint-LICENSE-APACHE
+    - library_licenses/num-bigint-LICENSE-MIT
     - library_licenses/num-bigint-LICENSE-APACHE
     - library_licenses/num-bigint-LICENSE-MIT
     - library_licenses/num-complex-LICENSE-APACHE
@@ -135,11 +146,13 @@ about:
     - library_licenses/num-iter-LICENSE-MIT
     - library_licenses/num-rational-LICENSE-APACHE
     - library_licenses/num-rational-LICENSE-MIT
+    - library_licenses/num-rational-LICENSE-APACHE
+    - library_licenses/num-rational-LICENSE-MIT
     - library_licenses/num-traits-LICENSE-APACHE
     - library_licenses/num-traits-LICENSE-MIT
     - library_licenses/num_cpus-LICENSE-APACHE
     - library_licenses/num_cpus-LICENSE-MIT
-    - library_licenses/numpy-LICENSE
+    - library_licenses/numpy-LICENSE-BSD
     - library_licenses/parking_lot-LICENSE-APACHE
     - library_licenses/parking_lot-LICENSE-MIT
     - library_licenses/parking_lot_core-LICENSE-APACHE
@@ -157,43 +170,25 @@ about:
     - library_licenses/pyo3-LICENSE-APACHE
     - library_licenses/pyo3-macros-LICENSE-APACHE
     - library_licenses/pyo3-macros-backend-LICENSE-APACHE
+    - library_licenses/quick-error-LICENSE-APACHE
+    - library_licenses/quick-error-LICENSE-MIT
     - library_licenses/quote-LICENSE-APACHE
     - library_licenses/quote-LICENSE-MIT
-    - library_licenses/rand-LICENSE-APACHE
-    - library_licenses/rand-LICENSE-MIT
+    - library_licenses/radium-LICENSE-MIT
     - library_licenses/rand-LICENSE-APACHE
     - library_licenses/rand-LICENSE-MIT
     - library_licenses/rand_chacha-LICENSE-APACHE
     - library_licenses/rand_chacha-LICENSE-MIT
-    - library_licenses/rand_chacha-LICENSE-APACHE
-    - library_licenses/rand_chacha-LICENSE-MIT
-    - library_licenses/rand_core-LICENSE-APACHE
-    - library_licenses/rand_core-LICENSE-MIT
-    - library_licenses/rand_core-LICENSE-APACHE
-    - library_licenses/rand_core-LICENSE-MIT
     - library_licenses/rand_core-LICENSE-APACHE
     - library_licenses/rand_core-LICENSE-MIT
     - library_licenses/rand_hc-LICENSE-APACHE
     - library_licenses/rand_hc-LICENSE-MIT
-    - library_licenses/rand_hc-LICENSE-APACHE
-    - library_licenses/rand_hc-LICENSE-MIT
-    - library_licenses/rand_isaac-LICENSE-APACHE
-    - library_licenses/rand_isaac-LICENSE-MIT
-    - library_licenses/rand_jitter-LICENSE-APACHE
-    - library_licenses/rand_jitter-LICENSE-MIT
-    - library_licenses/rand_os-LICENSE-APACHE
-    - library_licenses/rand_os-LICENSE-MIT
-    - library_licenses/rand_pcg-LICENSE-APACHE
-    - library_licenses/rand_pcg-LICENSE-MIT
-    - library_licenses/rand_xorshift-LICENSE-APACHE
-    - library_licenses/rand_xorshift-LICENSE-MIT
     - library_licenses/rawpointer-LICENSE-APACHE
     - library_licenses/rawpointer-LICENSE-MIT
     - library_licenses/rayon-LICENSE-APACHE
     - library_licenses/rayon-LICENSE-MIT
     - library_licenses/rayon-core-LICENSE-APACHE
     - library_licenses/rayon-core-LICENSE-MIT
-    - library_licenses/rdrand-LICENSE-ISC
     - library_licenses/redox_syscall-LICENSE-MIT
     - library_licenses/rustc_version-LICENSE-APACHE
     - library_licenses/rustc_version-LICENSE-MIT
@@ -216,6 +211,8 @@ about:
     - library_licenses/smallvec-LICENSE-MIT
     - library_licenses/standback-LICENSE-APACHE
     - library_licenses/standback-LICENSE-MIT
+    - library_licenses/static_assertions-LICENSE-APACHE
+    - library_licenses/static_assertions-LICENSE-MIT
     - library_licenses/stdweb-LICENSE-APACHE
     - library_licenses/stdweb-LICENSE-MIT
     - library_licenses/stdweb-derive-LICENSE-APACHE
@@ -226,6 +223,7 @@ about:
     - library_licenses/stdweb-internal-runtime-LICENSE-MIT
     - library_licenses/syn-LICENSE-APACHE
     - library_licenses/syn-LICENSE-MIT
+    - library_licenses/tap-LICENSE-MIT
     - library_licenses/time-LICENSE-APACHE
     - library_licenses/time-LICENSE-MIT
     - library_licenses/time-macros-LICENSE-APACHE
@@ -249,6 +247,7 @@ about:
     - library_licenses/winapi-i686-pc-windows-gnu-LICENSE-MIT
     - library_licenses/winapi-x86_64-pc-windows-gnu-LICENSE-APACHE
     - library_licenses/winapi-x86_64-pc-windows-gnu-LICENSE-MIT
+    - library_licenses/wyz-LICENSE-MIT
   doc_url: https://cds-astro.github.io/mocpy
   dev_url: https://github.com/cds-astro/mocpy
 
