@@ -30,8 +30,7 @@ requirements:
     - maturin
     - python
   run:
-    - astropy
-    - astropy-healpix
+    - astropy-base
     - regions
     - numpy
     - cdshealpix
@@ -45,7 +44,6 @@ test:
     - mocpy_test.py
   imports:
     - mocpy
-    - astropy
   commands:
     - pip check
     - python mocpy_test.py
