@@ -31,7 +31,6 @@ requirements:
     - python
   run:
     - astropy-base
-    - astropy-healpix
     - regions
     - numpy
     - cdshealpix
@@ -45,7 +44,6 @@ test:
     - mocpy_test.py
   imports:
     - mocpy
-    - astropy-base
   commands:
     - pip check
     - python mocpy_test.py
